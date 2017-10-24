@@ -55,15 +55,16 @@ struct DataStructureNASA{
     }
 }
 
-func fetchNASAPicture( completion:@escaping (DataStructureNASA)-> Void){
+func fetchNASAPicture( completion:@escaping (DataStructureNASA?)-> Void){
     let baseurl = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")!
     let url = baseurl.withQueries(query)!
     let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
         if let data = data{
             let jsonRaw =  try? JSONSerialization.jsonObject(with: data)
-            let dictionaryJson = jsonRaw as? [String:String]
-            let dataStructureNASA = DataStructureNASA(json: dictionaryJson!)
-            completion(dataStructureNASA!)
+            if let dictionaryJson = jsonRaw as? [String:String]{
+             let dataStructureNASA = DataStructureNASA(json: dictionaryJson)
+            completion(dataStructureNASA)
+            }
         }
     }
     dataTask.resume()

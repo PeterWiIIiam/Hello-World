@@ -13,6 +13,7 @@
 		0F9BCBBD1F9D89F2004900E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9BCBBC1F9D89F2004900E4 /* Assets.xcassets */; };
 		0F9BCBC01F9D89F2004900E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F9BCBBE1F9D89F2004900E4 /* LaunchScreen.storyboard */; };
 		0F9BCBC81F9D8A29004900E4 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BCBC71F9D8A29004900E4 /* ImageFetcher.swift */; };
+		81E71C3848CFBBDB40EDA30A /* Pods_From_Space.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1242FDA4BD2BC81ECB19810F /* Pods_From_Space.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0F9BCBBF1F9D89F2004900E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F9BCBC11F9D89F2004900E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F9BCBC71F9D8A29004900E4 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		1242FDA4BD2BC81ECB19810F /* Pods_From_Space.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_From_Space.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE2F919EA07A64762FF0752 /* Pods-From Space.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-From Space.release.xcconfig"; path = "Pods/Target Support Files/Pods-From Space/Pods-From Space.release.xcconfig"; sourceTree = "<group>"; };
+		B0DF10032ADB52659FADFC9B /* Pods-From Space.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-From Space.debug.xcconfig"; path = "Pods/Target Support Files/Pods-From Space/Pods-From Space.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E71C3848CFBBDB40EDA30A /* Pods_From_Space.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051B40E6D0EEF20A0BF6B944 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0DF10032ADB52659FADFC9B /* Pods-From Space.debug.xcconfig */,
+				2BE2F919EA07A64762FF0752 /* Pods-From Space.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		0F9BCBA91F9D89F2004900E4 = {
 			isa = PBXGroup;
 			children = (
 				0F9BCBB41F9D89F2004900E4 /* From Space */,
 				0F9BCBB31F9D89F2004900E4 /* Products */,
+				051B40E6D0EEF20A0BF6B944 /* Pods */,
+				8B79BA57FE8DAAD384F9977F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = "From Space";
 			sourceTree = "<group>";
 		};
+		8B79BA57FE8DAAD384F9977F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1242FDA4BD2BC81ECB19810F /* Pods_From_Space.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F9BCBC41F9D89F2004900E4 /* Build configuration list for PBXNativeTarget "From Space" */;
 			buildPhases = (
+				DA82E7211576B09D2EA4F359 /* [CP] Check Pods Manifest.lock */,
 				0F9BCBAE1F9D89F2004900E4 /* Sources */,
 				0F9BCBAF1F9D89F2004900E4 /* Frameworks */,
 				0F9BCBB01F9D89F2004900E4 /* Resources */,
+				EE61549E3D279FC643CE78F4 /* [CP] Embed Pods Frameworks */,
+				2D3E88728F4DCA97A672DCD3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D3E88728F4DCA97A672DCD3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-From Space/Pods-From Space-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA82E7211576B09D2EA4F359 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-From Space-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE61549E3D279FC643CE78F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-From Space/Pods-From Space-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-From Space/Pods-From Space-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F9BCBAE1F9D89F2004900E4 /* Sources */ = {
@@ -276,6 +361,7 @@
 		};
 		0F9BCBC51F9D89F2004900E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0DF10032ADB52659FADFC9B /* Pods-From Space.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +377,7 @@
 		};
 		0F9BCBC61F9D89F2004900E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE2F919EA07A64762FF0752 /* Pods-From Space.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

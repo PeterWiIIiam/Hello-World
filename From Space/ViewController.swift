@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
+
 
 class ViewController: UIViewController {
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var TitleLbl: UILabel!
     @IBOutlet weak var DescriptionView: UITextView!
@@ -22,9 +25,16 @@ class ViewController: UIViewController {
         Image.addGestureRecognizer(tapGesture)
         
     }
+    func randomDate()->String{
+        let year = arc4random_uniform(10)+2011
+        let month = arc4random_uniform(11)+1
+        let day = arc4random_uniform(30)+1
+        return "\(year)-\(String(format: "%02d", month))-\(String(format: "%02d", day))"
+    }
    
     @objc func nextPicture() -> Void {
-        query.updateValue("2011-07-15", forKey: "date")
+        let date = randomDate()
+        query.updateValue(date, forKey: "date")
         print(query["date"]!)
         updateUI()
     }
@@ -39,18 +49,27 @@ class ViewController: UIViewController {
     }
     
     func updateUI() -> Void {
+        self.spinner.startAnimating()
         fetchNASAPicture { (pictureInfo)  in
+            if let pictureInfo = pictureInfo{
             
             self.fetchImage(url: URL(string: pictureInfo.url)! , completion: { (image) in
                 DispatchQueue.main.async {
                     self.Image.image = image
+                    self.spinner.stopAnimating()
+
                 }
             })
             
             DispatchQueue.main.async {
                 self.DescriptionView.text = pictureInfo.description
                 self.TitleLbl.text = pictureInfo.title
-                
+                }
+            }else{
+                let date = self.randomDate()
+                query.updateValue(date, forKey: "date")
+                print(query["date"]!)
+                self.updateUI()
             }
         }
     }
