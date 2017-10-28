@@ -1,14 +1,10 @@
 //
 //  image-fetcher.swift
 //  From Space
-//
-//  Created by 何幸宇 on 10/22/17.
 //  Copyright © 2017 X. All rights reserved.
 //
 
 import Foundation
-
-//: Playground - noun: a place where people can play
 
 import UIKit
 
@@ -56,7 +52,7 @@ struct DataStructureNASA{
 }
 
 func fetchNASAPicture( completion:@escaping (DataStructureNASA?)-> Void){
-    let baseurl = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")!
+    let baseurl = URL(string: "https://api.nasa.gov/planetary/apod")!
     let url = baseurl.withQueries(query)!
     let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
         if let data = data{

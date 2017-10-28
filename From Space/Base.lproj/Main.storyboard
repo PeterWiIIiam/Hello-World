@@ -4,8 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,9 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vaX-Io-w5o">
-                                <rect key="frame" x="16" y="44" width="343" height="519"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWm-P1-yjm">
                                 <rect key="frame" x="8" y="582" width="359" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -45,33 +41,33 @@
                                 <rect key="frame" x="177" y="336" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBJ-tk-JhP">
+                                <rect key="frame" x="16" y="44" width="343" height="519"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Xj1-BD-JEh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ni-hl-n3i"/>
-                            <constraint firstItem="vaX-Io-w5o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9xq-KJ-qF1"/>
                             <constraint firstItem="Xj1-BD-JEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="RNI-n4-sjv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xj1-BD-JEh" secondAttribute="trailing" constant="8" id="SU8-ey-Ktc"/>
                             <constraint firstItem="PWm-P1-yjm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SiC-cY-8Mz"/>
-                            <constraint firstItem="vaX-Io-w5o" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="X68-qI-2kq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vaX-Io-w5o" secondAttribute="bottom" constant="215" id="bgf-eP-5QU"/>
-                            <constraint firstItem="PWm-P1-yjm" firstAttribute="top" secondItem="vaX-Io-w5o" secondAttribute="bottom" constant="19" id="dQn-Qm-zbD"/>
                             <constraint firstItem="PWm-P1-yjm" firstAttribute="width" secondItem="Xj1-BD-JEh" secondAttribute="width" id="hSE-fp-u4O"/>
-                            <constraint firstItem="vaX-Io-w5o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l3O-Sm-xhx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xj1-BD-JEh" secondAttribute="bottom" constant="5" id="poA-xK-vdz"/>
+                            <constraint firstItem="Xj1-BD-JEh" firstAttribute="top" secondItem="PWm-P1-yjm" secondAttribute="bottom" constant="31" id="sgR-pV-bGd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="DescriptionView" destination="Xj1-BD-JEh" id="GFZ-cm-dd0"/>
-                        <outlet property="Image" destination="vaX-Io-w5o" id="tcr-ch-nfQ"/>
+                        <outlet property="Scroll" destination="KBJ-tk-JhP" id="lsJ-eT-YTS"/>
                         <outlet property="TitleLbl" destination="PWm-P1-yjm" id="Zff-cH-k8H"/>
                         <outlet property="spinner" destination="87j-Sh-XTW" id="diT-4c-OFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="117.59999999999999" y="116.74876847290641"/>
         </scene>
     </scenes>
 </document>
